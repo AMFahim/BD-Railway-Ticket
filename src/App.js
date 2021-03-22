@@ -9,19 +9,23 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import NoMatch from './Component/NoMatch/NoMatch';
 
 
  function App() {
   return (
     <div className="margin">
       <Router>
-      <Header></Header>
+      <Header/>
         <Switch>
           <Route exact path="/">
-            <Home></Home>
+            <Home/>
           </Route>
           <Route path="/signin">
-            <SignIn></SignIn>
+            <SignIn/>
+          </Route>
+          <Route path="*"> 
+            <NoMatch/>
           </Route>
         </Switch>
       </Router>

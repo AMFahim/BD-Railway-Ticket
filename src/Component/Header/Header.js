@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -12,11 +13,11 @@ const Header = () => {
     </button>
     <div className="collapse navbar-collapse justify-content-end for-navbar" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
-        <a className="nav-link" href="#">Destination</a>
-        <a className="nav-link" href="#">Blog</a>
-        <a className="nav-link" href="#">Contact</a>
-        <a className="nav-link" href="#"><button className="btn btn-warning">Sign In</button></a>
+        <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
+        <Link to="/" className="nav-link">Destination</Link>
+        <Link to="/" className="nav-link">Blog</Link>
+        <Link to="/" className="nav-link">Contact</Link>
+        <Link to="/signin" className="nav-link"><button className="btn btn-warning">Sign In</button></Link>
         
       </div>
     </div>
